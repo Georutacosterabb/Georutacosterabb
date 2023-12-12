@@ -1,0 +1,43 @@
+.body  {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 50px;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.map {
+    width: 100%;
+    height: 400px;
+}
+
+.geositios {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: rgb(253, 255, 240);
+}
+
+.geositios div img {
+    width: 100%;
+}
+
+.geositios div img:hover {
+    opacity: 0.5;
+}
+
+p {
+    text-align: justify;
+    margin-right: 10px;
+    font-size: 20 px;
+}
