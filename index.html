@@ -1,0 +1,1527 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <link rel="stylesheet" href="D:\Proyecto_Geoparque\Qgis2web\plugins\Leaflet.SidePanel-main\dist\leaflet-sidepanel.css" >
+        <link rel="stylesheet" href="D:\Proyecto_Geoparque\Qgis2web\plugins\leaflet-routing-machine-3.2.12\dist\leaflet-routing-machine.css">
+        <link rel="stylesheet" href="D:\Proyecto_Geoparque\Qgis2web\QGIS2WEB_Georuta\css\style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+            <div id="mySidepanelRight" class="sidepanel" aria-label="side panel" aria-hidden="false">
+                <div class="sidepanel-inner-wrapper">
+                    <nav class="sidepanel-tabs-wrapper" aria-label="sidepanel tab navigation">
+                        <ul class="sidepanel-tabs">
+                            <li class="sidepanel-tab">
+                                <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-1">
+                                    Geositios
+                                </a>
+                            </li>
+                            <li class="sidepanel-tab">
+                                <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-2">
+                                    Georutas
+                                </a>
+                            </li>
+                            <li class="sidepanel-tab">
+                                <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-3">
+                                    Galería
+                                </a>
+                            </li>
+                            <li class="sidepanel-tab">
+                                <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-4">
+                                    Encuesta
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="sidepanel-content-wrapper">
+                        <div class="sidepanel-content">
+                            <div class="sidepanel-tab-content" data-tab-content="tab-1">
+                                <div class="container">
+                                    <div class="geositios">
+                                        <div id="geositio1">
+                                            <img src="images\Burca.JPG">
+                                            <h2>Burca</h2>
+                                            <p> <div id="button1">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio2">
+                                            <img src="images\Caleta_Chica_Cocholgue.jpg">
+                                            <h2>Caleta Chica Cocholgue</h2>
+                                            <p><div id="button2">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio3">
+                                            <img src="images\Caleta_Grande_Cocholgue.jpg">
+                                            <h2>Caleta Grande Cocholgue</h2>
+                                            <p><div id="button3">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio4">
+                                            <img src="images\CALETA NECOCHEA.jpg">
+                                            <h2>Caleta Necochea</h2>
+                                            <p><div id="button4">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio5">
+                                            <img src="images\CALETA VILLARRICA_DICHATO.jpg">
+                                            <h2>Caleta Villarrica</h2>
+                                            <p><div id="button5">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio6">
+                                            <img src="images\Casa_Piedra.JPG">
+                                            <h2>Casa Piedra</h2>
+                                            <p><div id="button6">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio7">
+                                            <img src="images\Cascada La Leonera N º 1.jpg">
+                                            <h2>Cascada La Leonera</h2>
+                                            <p><div id="button7">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio8">
+                                            <img src="images\merquiche.JPG">
+                                            <h2>Merquiche</h2>
+                                            <p><div id="button8">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio9">
+                                            <img src="images\Mirador_del_Inglés.JPG">
+                                            <h2>Mirador del Inglés</h2>
+                                            <p><div id="button9">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio10">
+                                            <img src="images\Mirador_elPino.jpg">
+                                            <h2>Mirador el Pino</h2>
+                                            <p><div id="button10">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio11">
+                                            <img src="images\Mirador_Rocuant_Andalien.png">
+                                            <h2>Mirador Rocuant-Andalien</h2>
+                                            <p><div id="button11">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio12">
+                                            <img src="images\Mirador_lirquen_Tomé.JPG">
+                                            <h2>Mirador Lirquén-Tomé</h2>
+                                            <p><div id="button12">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div> 
+                                        <div id="geositio13">
+                                            <img src="images\Pingueral.jpg">
+                                            <h2>Pingueral</h2>
+                                            <p><div id="button13">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div> 
+                                        <div id="geositio14">
+                                            <img src="images\Bellavista.jpg">
+                                            <h2>Playa Bellavista</h2>
+                                            <p><div id="button14">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div> 
+                                        <div id="geositio15">
+                                            <img src="images\Playa_Blanca.jpg">
+                                            <h2>Playa Blanca</h2>
+                                            <p><div id="button15">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div> 
+                                        <div id="geositio16">
+                                            <img src="images\Dichato.jpg">
+                                            <h2>Playa Dichato</h2>
+                                            <p><div id="button16">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div> 
+                                        <div id="geositio17">
+                                            <img src="images\El_Morro.jpg">
+                                            <h2>Playa el Morro</h2>
+                                            <p><div id="button17">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div> 
+                                        <div id="geositio18">
+                                            <img src="images\La_Cata.jpg">
+                                            <h2>Playa la Cata</h2>
+                                            <p><div id="button18">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div> 
+                                        <div id="geositio19">
+                                            <img src="images\Playa_Negra.JPG">
+                                            <h2>Playa Negra</h2>
+                                            <p><div id="button19">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div> 
+                                        <div id="geositio20">
+                                            <img src="images\Playa_Paraíso.jpg">
+                                            <h2>Playa Paraíso</h2>
+                                            <p><div id="button20">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div> 
+                                        <div id="geositio21">
+                                            <img src="images\purema.jpg">
+                                            <h2>Playa Purema</h2>
+                                            <p><div id="button21">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio22">
+                                            <img src="images\Playa tres pinos.jpg">
+                                            <h2>Playa Tres Pinos</h2>
+                                            <p><div id="button22">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio23">
+                                            <img src="images\puda.JPG">
+                                            <h2>Pudá</h2>
+                                            <p> <div id="button23">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio24">
+                                            <img src="images\punta_parra.jpg">
+                                            <h2>Punta de Parra</h2>
+                                            <p><div id="button24">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio25">
+                                            <img src="images\Rio Pingueral y Balneario Nº 1.jpg">
+                                            <h2>Río Pingueral</h2>
+                                            <p><div id="button25">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio26">
+                                            <img src="images\Sendero Necochea.jpg">
+                                            <h2>Sendero Necochea</h2>
+                                            <p><div id="button26">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                        <div id="geositio27">
+                                            <img src="images\Vegas_de_Coliumo.jpg">
+                                            <h2>Vegas de Coliumo</h2>
+                                            <p><div id="button27">
+                                                <button>Mostrar ubicación</button>
+                                              </div>           <button class="btn btn-primary">Acerca del geositio</button></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="sidepanel-tab-content" data-tab-content="tab-2">
+                                <h4>Content 2</h4>
+                                <p>Nam nec lacinia purus, in accumsan arcu. Aenean at maximus tortor, eget porttitor leo. Fusce justo lorem, dictum nec rutrum sed, mattis faucibus
+                                    diam.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper ex sagittis lacus gravida interdum quis sit amet justo. Nunc posuere
+                                    massa et feugiat efficitur. Donec est magna, lobortis sit amet ligula ut, vehicula posuere diam. Suspendisse aliquet blandit velit, consectetur
+                                    scelerisque libero porttitor eu. Praesent faucibus dignissim maximus. Vestibulum porta eu tellus sit amet ultricies. Integer aliquet vestibulum
+                                    massa,
+                                    in interdum arcu commodo ac. Curabitur sit amet cursus ipsum. Donec ut diam orci. Fusce odio diam, laoreet non elit sed, suscipit mollis leo. Fusce
+                                    non
+                                    turpis faucibus, placerat sapien quis, varius ligula. Praesent ac magna id tortor ultricies ultricies quis nec quam.</p>
+                            </div>
+                            <div class="sidepanel-tab-content" data-tab-content="tab-3">
+                                <h1>Georuta Costera Biobio</h1>
+                                <p>Nam nec lacinia purus, in accumsan arcu. Aenean at maximus tortor, eget porttitor leo. Fusce justo lorem, dictum nec rutrum sed, mattis faucibus
+                                    diam.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper ex sagittis lacus gravida interdum quis sit amet justo. Nunc posuere
+                                    massa et feugiat efficitur. Donec est magna, lobortis sit amet ligula ut, vehicula posuere diam. Suspendisse aliquet blandit velit, consectetur
+                                    scelerisque libero porttitor eu. Praesent faucibus dignissim maximus. Vestibulum porta eu tellus sit amet ultricies. Integer aliquet vestibulum
+                                    massa,
+                                    in interdum arcu commodo ac. Curabitur sit amet cursus ipsum. Donec ut diam orci. Fusce odio diam, laoreet non elit sed, suscipit mollis leo. Fusce
+                                    non
+                                    turpis faucibus, placerat sapien quis, varius ligula. Praesent ac magna id tortor ultricies ultricies quis nec quam.</p>
+                                    <button class="btn btn-primary" onclick="startRouting()">Galería</button>           <button class="btn btn-primary">Referencias bibliográficas</button>
+                            <div class="sidepanel-tab-content" data-tab-content="tab-4">
+                                <h4>Content 4</h4>
+                                <p>Etiam varius in neque a tristique. Maecenas euismod pharetra scelerisque. Nam in pretium nulla, vel blandit risus. Duis posuere egestas nisi, vitae
+                                    iaculis tortor varius eget. Morbi molestie sem in varius vulputate. Cras enim sapien, malesuada id nisi eu, volutpat congue leo. Praesent aliquet
+                                    ipsum
+                                    id lectus consequat rutrum. In vitae dolor pellentesque dolor scelerisque condimentum eget at ligula. Integer vel turpis eros. Cras at hendrerit
+                                    mauris.
+                                    Aliquam erat volutpat. Quisque vehicula pharetra mauris, nec finibus augue posuere ut. Etiam condimentum lacus at purus luctus finibus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidepanel-toggle-container">
+                    <button class="sidepanel-toggle-button" type="button" aria-label="toggle side panel"></button>
+                </div>
+            </div>
+            <script src=D:\Proyecto_Geoparque\Qgis2web\QGIS2WEB_Georuta\js\app.js></script>
+        </div>
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+		crossorigin=""></script>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js" ></script><script src="js/L.Control.Locate.min.js"></script>
+        <script src="js/multi-style-layer.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="data/Geologa_1.js"></script>
+        <script src="data/Rutamartima_2.js"></script>
+        <script src="data/Areasnaturales_3.js"></script>
+        <script src="data/GeorutaS_4.js"></script>
+        <script src="data/GeorutaN_5.js"></script>
+        <script src="data/GeorutaI_6.js"></script>
+        <script src="data/Cotasdenivel100m_7.js"></script>
+        <script src="data/Bomberos_8.js"></script>
+        <script src="data/Carabineros_9.js"></script>
+        <script src="data/CentrodeSalud_10.js"></script>
+        <script src="data/Gasolinera_11.js"></script>
+        <script src="data/Produccinartesanal_12.js"></script>
+        <script src="data/Alojamiento_13.js"></script>
+        <script src="data/Esparcimiento_14.js"></script>
+        <script src="data/Restauranteosimilar_15.js"></script>
+        <script src="data/Touroperador_16.js"></script>
+        <script src="data/Turismoaventura_17.js"></script>
+        <script src="data/Puertos_18.js"></script>
+        <script src="data/Geositios_19.js"></script>
+        <script src="js\routing.js"></script>
+        <script src="D:\Proyecto_Geoparque\Qgis2web\plugins\leaflet-routing-machine-3.2.12\dist\leaflet-routing-machine.js"></script>
+        <script src="D:\Proyecto_Geoparque\Qgis2web\plugins\Leaflet.SidePanel-main\dist\leaflet-sidepanel.min.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:20, minZoom:9
+        })
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        L.control.locate({zIndex: 1000, onAdd: () => locateControl.layer.bringToFront(), locateOptions: {maxZoom: 19}}).addTo(map);
+        var measureControl = new L.Control.Measure({
+            zIndex: 1000,
+            onAdd: () => locateControl.layer.bringToFront(),
+            position: 'topleft',
+            primaryLengthUnit: 'meters',
+            secondaryLengthUnit: 'kilometers',
+            primaryAreaUnit: 'sqmeters',
+            secondaryAreaUnit: 'hectares'
+        });
+        measureControl.addTo(map);
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0]
+        .innerHTML = '';
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0]
+        .className += ' fas fa-ruler';
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+            if (bounds_group.getLayers().length) {
+                map.fitBounds(bounds_group.getBounds());
+            }
+        }
+        map.createPane('pane_CapaBase_0');
+        map.getPane('pane_CapaBase_0').style.zIndex = 100;
+        var layer_CapaBase_0 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            pane: 'pane_CapaBase_0',
+            opacity: 1.0,
+            attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
+            minZoom: 9,
+            maxZoom: 20,
+            minNativeZoom: 0,
+            maxNativeZoom: 19
+        });
+        layer_CapaBase_0;
+        map.addLayer(layer_CapaBase_0);
+        function pop_Geologa_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['GEO'] !== null ? autolinker.link(feature.properties['GEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Geologa_1_0(feature) {
+            switch(String(feature.properties['GEO'])) {
+                case 'Borde costero':
+                    return {
+                pane: 'pane_Geologa_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(230,230,0,0.7)',
+                interactive: true,
+            }
+                    break;
+                case 'Cuaternario':
+                    return {
+                pane: 'pane_Geologa_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(248,240,118,0.7)',
+                interactive: true,
+            }
+                    break;
+                case 'Fm Andalien':
+                    return {
+                pane: 'pane_Geologa_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(230,137,0,0.7)',
+                interactive: true,
+            }
+                    break;
+                case 'Intrusivos':
+                    return {
+                pane: 'pane_Geologa_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,85,127,0.7)',
+                interactive: true,
+            }
+                    break;
+                case 'otro':
+                    return {
+                pane: 'pane_Geologa_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(183,182,181,0.7)',
+                interactive: true,
+            }
+                    break;
+                case 'Paralíticos':
+                    return {
+                pane: 'pane_Geologa_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,180,127,0.7)',
+                interactive: true,
+            }
+                    break;
+                case 'Quiriquina':
+                    return {
+                pane: 'pane_Geologa_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(163,255,115,0.7)',
+                interactive: true,
+            }
+                    break;
+                case 'Serie Oriental':
+                    return {
+                pane: 'pane_Geologa_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(137,68,101,0.7)',
+                interactive: true,
+            }
+                    break;
+                case 'Terraza':
+                    return {
+                pane: 'pane_Geologa_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(237,236,179,0.7)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_Geologa_1');
+        map.getPane('pane_Geologa_1').style.zIndex = 101;
+        map.getPane('pane_Geologa_1').style['mix-blend-mode'] = 'normal';
+        var layer_Geologa_1 = new L.geoJson(json_Geologa_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Geologa_1',
+            layerName: 'layer_Geologa_1',
+            pane: 'pane_Geologa_1',
+            onEachFeature: pop_Geologa_1,
+            style: style_Geologa_1_0,
+        });
+        bounds_group.addLayer(layer_Geologa_1);
+        map.addLayer(layer_Geologa_1);
+        function pop_Rutamartima_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Rutamartima_2_0() {
+            return {
+                pane: 'pane_Rutamartima_2',
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Rutamartima_2');
+        map.getPane('pane_Rutamartima_2').style.zIndex = 102;
+        map.getPane('pane_Rutamartima_2').style['mix-blend-mode'] = 'normal';
+        var layer_Rutamartima_2 = new L.geoJson(json_Rutamartima_2, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Rutamartima_2',
+            layerName: 'layer_Rutamartima_2',
+            pane: 'pane_Rutamartima_2',
+            onEachFeature: pop_Rutamartima_2,
+            style: style_Rutamartima_2_0,
+        });
+        bounds_group.addLayer(layer_Rutamartima_2);
+        map.addLayer(layer_Rutamartima_2);
+        function pop_Areasnaturales_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        var pattern_Areasnaturales_3_0 = new L.StripePattern({
+            weight: 0.46,
+            spaceWeight: 2.0,
+            color: '#98e600',
+            opacity: 0.535,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_Areasnaturales_3_0.addTo(map);
+        function style_Areasnaturales_3_0() {
+            return {
+                pane: 'pane_Areasnaturales_3',
+                stroke: false,
+                fillOpacity: 1,
+                fillPattern: pattern_Areasnaturales_3_0,
+                interactive: false,
+            }
+        }
+        function style_Areasnaturales_3_1() {
+            return {
+                pane: 'pane_Areasnaturales_3',
+                opacity: 1,
+                color: 'rgba(35,106,35,0.535)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(128,255,0,0.18882352941176472)',
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Areasnaturales_3');
+        map.getPane('pane_Areasnaturales_3').style.zIndex = 103;
+        map.getPane('pane_Areasnaturales_3').style['mix-blend-mode'] = 'normal';
+        var layer_Areasnaturales_3 = new L.geoJson.multiStyle(json_Areasnaturales_3, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Areasnaturales_3',
+            layerName: 'layer_Areasnaturales_3',
+            pane: 'pane_Areasnaturales_3',
+            onEachFeature: pop_Areasnaturales_3,
+            styles: [style_Areasnaturales_3_0,style_Areasnaturales_3_1,]
+        });
+        bounds_group.addLayer(layer_Areasnaturales_3);
+        map.addLayer(layer_Areasnaturales_3);
+        function pop_GeorutaS_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_GeorutaS_4_0() {
+            return {
+                pane: 'pane_GeorutaS_4',
+                opacity: 1,
+                color: 'rgba(4,249,28,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_GeorutaS_4');
+        map.getPane('pane_GeorutaS_4').style.zIndex = 104;
+        map.getPane('pane_GeorutaS_4').style['mix-blend-mode'] = 'normal';
+        var layer_GeorutaS_4 = new L.geoJson(json_GeorutaS_4, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_GeorutaS_4',
+            layerName: 'layer_GeorutaS_4',
+            pane: 'pane_GeorutaS_4',
+            onEachFeature: pop_GeorutaS_4,
+            style: style_GeorutaS_4_0,
+        });
+        bounds_group.addLayer(layer_GeorutaS_4);
+        map.addLayer(layer_GeorutaS_4);
+        function pop_GeorutaN_5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_GeorutaN_5_0() {
+            return {
+                pane: 'pane_GeorutaN_5',
+                opacity: 1,
+                color: 'rgba(248,21,70,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_GeorutaN_5');
+        map.getPane('pane_GeorutaN_5').style.zIndex = 105;
+        map.getPane('pane_GeorutaN_5').style['mix-blend-mode'] = 'normal';
+        var layer_GeorutaN_5 = new L.geoJson(json_GeorutaN_5, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_GeorutaN_5',
+            layerName: 'layer_GeorutaN_5',
+            pane: 'pane_GeorutaN_5',
+            onEachFeature: pop_GeorutaN_5,
+            style: style_GeorutaN_5_0,
+        });
+        bounds_group.addLayer(layer_GeorutaN_5);
+        map.addLayer(layer_GeorutaN_5);
+        function pop_GeorutaI_6(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_GeorutaI_6_0() {
+            return {
+                pane: 'pane_GeorutaI_6',
+                opacity: 1,
+                color: 'rgba(240,25,176,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_GeorutaI_6');
+        map.getPane('pane_GeorutaI_6').style.zIndex = 106;
+        map.getPane('pane_GeorutaI_6').style['mix-blend-mode'] = 'normal';
+        var layer_GeorutaI_6 = new L.geoJson(json_GeorutaI_6, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_GeorutaI_6',
+            layerName: 'layer_GeorutaI_6',
+            pane: 'pane_GeorutaI_6',
+            onEachFeature: pop_GeorutaI_6,
+            style: style_GeorutaI_6_0,
+        });
+        bounds_group.addLayer(layer_GeorutaI_6);
+        map.addLayer(layer_GeorutaI_6);
+        function pop_Cotasdenivel100m_7(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Contour'] !== null ? autolinker.link(feature.properties['Contour'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Cotasdenivel100m_7_0() {
+            return {
+                pane: 'pane_Cotasdenivel100m_7',
+                opacity: 1,
+                color: 'rgba(218,222,222,0.2)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Cotasdenivel100m_7');
+        map.getPane('pane_Cotasdenivel100m_7').style.zIndex = 107;
+        map.getPane('pane_Cotasdenivel100m_7').style['mix-blend-mode'] = 'normal';
+        var layer_Cotasdenivel100m_7 = new L.geoJson(json_Cotasdenivel100m_7, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Cotasdenivel100m_7',
+            layerName: 'layer_Cotasdenivel100m_7',
+            pane: 'pane_Cotasdenivel100m_7',
+            onEachFeature: pop_Cotasdenivel100m_7,
+            style: style_Cotasdenivel100m_7_0,
+        });
+        bounds_group.addLayer(layer_Cotasdenivel100m_7);
+        map.addLayer(layer_Cotasdenivel100m_7);
+        function pop_Bomberos_8(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Name'] !== null ? autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Bomberos_8_0() {
+            return {
+                pane: 'pane_Bomberos_8',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Bomberos_8.svg',
+            iconSize: [17.479999999999997, 17.479999999999997]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Bomberos_8');
+        map.getPane('pane_Bomberos_8').style.zIndex = 108;
+        map.getPane('pane_Bomberos_8').style['mix-blend-mode'] = 'normal';
+        var layer_Bomberos_8 = new L.geoJson(json_Bomberos_8, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Bomberos_8',
+            layerName: 'layer_Bomberos_8',
+            pane: 'pane_Bomberos_8',
+            onEachFeature: pop_Bomberos_8,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Bomberos_8_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Bomberos_8);
+        map.addLayer(layer_Bomberos_8);
+        function pop_Carabineros_9(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Carabineros_9_0() {
+            return {
+                pane: 'pane_Carabineros_9',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Carabineros_9.svg',
+            iconSize: [17.479999999999997, 17.479999999999997]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Carabineros_9');
+        map.getPane('pane_Carabineros_9').style.zIndex = 109;
+        map.getPane('pane_Carabineros_9').style['mix-blend-mode'] = 'normal';
+        var layer_Carabineros_9 = new L.geoJson(json_Carabineros_9, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Carabineros_9',
+            layerName: 'layer_Carabineros_9',
+            pane: 'pane_Carabineros_9',
+            onEachFeature: pop_Carabineros_9,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Carabineros_9_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Carabineros_9);
+        map.addLayer(layer_Carabineros_9);
+        function pop_CentrodeSalud_10(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Name'] !== null ? autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_CentrodeSalud_10_0() {
+            return {
+                pane: 'pane_CentrodeSalud_10',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/CentrodeSalud_10.svg',
+            iconSize: [17.479999999999997, 17.479999999999997]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_CentrodeSalud_10');
+        map.getPane('pane_CentrodeSalud_10').style.zIndex = 110;
+        map.getPane('pane_CentrodeSalud_10').style['mix-blend-mode'] = 'normal';
+        var layer_CentrodeSalud_10 = new L.geoJson(json_CentrodeSalud_10, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_CentrodeSalud_10',
+            layerName: 'layer_CentrodeSalud_10',
+            pane: 'pane_CentrodeSalud_10',
+            onEachFeature: pop_CentrodeSalud_10,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_CentrodeSalud_10_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_CentrodeSalud_10);
+        map.addLayer(layer_CentrodeSalud_10);
+        function pop_Gasolinera_11(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Name'] !== null ? autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Gasolinera_11_0() {
+            return {
+                pane: 'pane_Gasolinera_11',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Gasolinera_11.svg',
+            iconSize: [17.479999999999997, 17.479999999999997]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Gasolinera_11');
+        map.getPane('pane_Gasolinera_11').style.zIndex = 111;
+        map.getPane('pane_Gasolinera_11').style['mix-blend-mode'] = 'normal';
+        var layer_Gasolinera_11 = new L.geoJson(json_Gasolinera_11, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Gasolinera_11',
+            layerName: 'layer_Gasolinera_11',
+            pane: 'pane_Gasolinera_11',
+            onEachFeature: pop_Gasolinera_11,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Gasolinera_11_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Gasolinera_11);
+        map.addLayer(layer_Gasolinera_11);
+        function pop_Produccinartesanal_12(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['PopupInfo'] !== null ? autolinker.link(feature.properties['PopupInfo'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Produccinartesanal_12_0() {
+            return {
+                pane: 'pane_Produccinartesanal_12',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Produccinartesanal_12.svg',
+            iconSize: [17.479999999999997, 17.479999999999997]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Produccinartesanal_12');
+        map.getPane('pane_Produccinartesanal_12').style.zIndex = 112;
+        map.getPane('pane_Produccinartesanal_12').style['mix-blend-mode'] = 'normal';
+        var layer_Produccinartesanal_12 = new L.geoJson(json_Produccinartesanal_12, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Produccinartesanal_12',
+            layerName: 'layer_Produccinartesanal_12',
+            pane: 'pane_Produccinartesanal_12',
+            onEachFeature: pop_Produccinartesanal_12,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Produccinartesanal_12_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Produccinartesanal_12);
+        map.addLayer(layer_Produccinartesanal_12);
+        function pop_Alojamiento_13(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['PopupInfo'] !== null ? autolinker.link(feature.properties['PopupInfo'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Alojamiento_13_0() {
+            return {
+                pane: 'pane_Alojamiento_13',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Alojamiento_13.svg',
+            iconSize: [17.479999999999997, 17.479999999999997]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Alojamiento_13');
+        map.getPane('pane_Alojamiento_13').style.zIndex = 113;
+        map.getPane('pane_Alojamiento_13').style['mix-blend-mode'] = 'normal';
+        var layer_Alojamiento_13 = new L.geoJson(json_Alojamiento_13, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Alojamiento_13',
+            layerName: 'layer_Alojamiento_13',
+            pane: 'pane_Alojamiento_13',
+            onEachFeature: pop_Alojamiento_13,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Alojamiento_13_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Alojamiento_13);
+        map.addLayer(layer_Alojamiento_13);
+        function pop_Esparcimiento_14(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['PopupInfo'] !== null ? autolinker.link(feature.properties['PopupInfo'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Esparcimiento_14_0() {
+            return {
+                pane: 'pane_Esparcimiento_14',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Esparcimiento_14.svg',
+            iconSize: [17.479999999999997, 17.479999999999997]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Esparcimiento_14');
+        map.getPane('pane_Esparcimiento_14').style.zIndex = 114;
+        map.getPane('pane_Esparcimiento_14').style['mix-blend-mode'] = 'normal';
+        var layer_Esparcimiento_14 = new L.geoJson(json_Esparcimiento_14, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Esparcimiento_14',
+            layerName: 'layer_Esparcimiento_14',
+            pane: 'pane_Esparcimiento_14',
+            onEachFeature: pop_Esparcimiento_14,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Esparcimiento_14_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Esparcimiento_14);
+        map.addLayer(layer_Esparcimiento_14);
+        function pop_Restauranteosimilar_15(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Name'] !== null ? autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['PopupInfo'] !== null ? autolinker.link(feature.properties['PopupInfo'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Restauranteosimilar_15_0() {
+            return {
+                pane: 'pane_Restauranteosimilar_15',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Restauranteosimilar_15.svg',
+            iconSize: [17.479999999999997, 17.479999999999997]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Restauranteosimilar_15');
+        map.getPane('pane_Restauranteosimilar_15').style.zIndex = 115;
+        map.getPane('pane_Restauranteosimilar_15').style['mix-blend-mode'] = 'normal';
+        var layer_Restauranteosimilar_15 = new L.geoJson(json_Restauranteosimilar_15, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Restauranteosimilar_15',
+            layerName: 'layer_Restauranteosimilar_15',
+            pane: 'pane_Restauranteosimilar_15',
+            onEachFeature: pop_Restauranteosimilar_15,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Restauranteosimilar_15_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Restauranteosimilar_15);
+        map.addLayer(layer_Restauranteosimilar_15);
+        function pop_Touroperador_16(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['PopupInfo'] !== null ? autolinker.link(feature.properties['PopupInfo'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Touroperador_16_0() {
+            return {
+                pane: 'pane_Touroperador_16',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Touroperador_16.svg',
+            iconSize: [17.479999999999997, 17.479999999999997]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Touroperador_16');
+        map.getPane('pane_Touroperador_16').style.zIndex = 116;
+        map.getPane('pane_Touroperador_16').style['mix-blend-mode'] = 'normal';
+        var layer_Touroperador_16 = new L.geoJson(json_Touroperador_16, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Touroperador_16',
+            layerName: 'layer_Touroperador_16',
+            pane: 'pane_Touroperador_16',
+            onEachFeature: pop_Touroperador_16,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Touroperador_16_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Touroperador_16);
+        map.addLayer(layer_Touroperador_16);
+        function pop_Turismoaventura_17(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['PopupInfo'] !== null ? autolinker.link(feature.properties['PopupInfo'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Turismoaventura_17_0() {
+            return {
+                pane: 'pane_Turismoaventura_17',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Turismoaventura_17.svg',
+            iconSize: [17.479999999999997, 17.479999999999997]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Turismoaventura_17');
+        map.getPane('pane_Turismoaventura_17').style.zIndex = 117;
+        map.getPane('pane_Turismoaventura_17').style['mix-blend-mode'] = 'normal';
+        var layer_Turismoaventura_17 = new L.geoJson(json_Turismoaventura_17, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Turismoaventura_17',
+            layerName: 'layer_Turismoaventura_17',
+            pane: 'pane_Turismoaventura_17',
+            onEachFeature: pop_Turismoaventura_17,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Turismoaventura_17_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Turismoaventura_17);
+        map.addLayer(layer_Turismoaventura_17);
+        function pop_Puertos_18(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Puertos_18_0() {
+            return {
+                pane: 'pane_Puertos_18',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Puertos_18.svg',
+            iconSize: [17.479999999999997, 17.479999999999997]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Puertos_18');
+        map.getPane('pane_Puertos_18').style.zIndex = 118;
+        map.getPane('pane_Puertos_18').style['mix-blend-mode'] = 'normal';
+        var layer_Puertos_18 = new L.geoJson(json_Puertos_18, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Puertos_18',
+            layerName: 'layer_Puertos_18',
+            pane: 'pane_Puertos_18',
+            onEachFeature: pop_Puertos_18,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Puertos_18_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Puertos_18);
+        map.addLayer(layer_Puertos_18);
+        function pop_Geositios_19(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Geositios_19_0() {
+            return {
+                pane: 'pane_Geositios_19',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Geositios_19.svg',
+            iconSize: [34.199999999999996, 34.199999999999996]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Geositios_19');
+        map.getPane('pane_Geositios_19').style.zIndex = 119;
+        map.getPane('pane_Geositios_19').style['mix-blend-mode'] = 'normal';
+        var layer_Geositios_19 = new L.geoJson(json_Geositios_19, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Geositios_19',
+            layerName: 'layer_Geositios_19',
+            pane: 'pane_Geositios_19',
+            onEachFeature: pop_Geositios_19,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Geositios_19_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Geositios_19);
+        map.addLayer(layer_Geositios_19);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/Geositios_19.png" /> Geositios': layer_Geositios_19,'<img src="legend/Puertos_18.png" /> Puertos': layer_Puertos_18,'<img src="legend/Turismoaventura_17.png" /> Turismo aventura': layer_Turismoaventura_17,'<img src="legend/Touroperador_16.png" /> Tour operador': layer_Touroperador_16,'<img src="legend/Restauranteosimilar_15.png" /> Restaurante o similar': layer_Restauranteosimilar_15,'<img src="legend/Esparcimiento_14.png" /> Esparcimiento': layer_Esparcimiento_14,'<img src="legend/Alojamiento_13.png" /> Alojamiento': layer_Alojamiento_13,'<img src="legend/Produccinartesanal_12.png" /> Producción artesanal': layer_Produccinartesanal_12,'<img src="legend/Gasolinera_11.png" /> Gasolinera': layer_Gasolinera_11,'<img src="legend/CentrodeSalud_10.png" /> Centro de Salud': layer_CentrodeSalud_10,'<img src="legend/Carabineros_9.png" /> Carabineros': layer_Carabineros_9,'<img src="legend/Bomberos_8.png" /> Bomberos': layer_Bomberos_8,'<img src="legend/Cotasdenivel100m_7.png" /> Cotas de nivel (100 m)': layer_Cotasdenivel100m_7,'<img src="legend/GeorutaI_6.png" /> Georuta I': layer_GeorutaI_6,'<img src="legend/GeorutaN_5.png" /> Georuta N': layer_GeorutaN_5,'<img src="legend/GeorutaS_4.png" /> Georuta S': layer_GeorutaS_4,'<img src="legend/Areasnaturales_3.png" /> Areas naturales': layer_Areasnaturales_3,'<img src="legend/Rutamartima_2.png" /> Ruta marítima': layer_Rutamartima_2,'Geología<br /><table><tr><td style="text-align: center;"><img src="legend/Geologa_1_Bordecostero0.png" /></td><td>Borde costero</td></tr><tr><td style="text-align: center;"><img src="legend/Geologa_1_Cuaternario1.png" /></td><td>Cuaternario</td></tr><tr><td style="text-align: center;"><img src="legend/Geologa_1_FmAndalien2.png" /></td><td>Fm Andalien</td></tr><tr><td style="text-align: center;"><img src="legend/Geologa_1_Intrusivos3.png" /></td><td>Intrusivos</td></tr><tr><td style="text-align: center;"><img src="legend/Geologa_1_otro4.png" /></td><td>otro</td></tr><tr><td style="text-align: center;"><img src="legend/Geologa_1_Paralíticos5.png" /></td><td>Paralíticos</td></tr><tr><td style="text-align: center;"><img src="legend/Geologa_1_Quiriquina6.png" /></td><td>Quiriquina</td></tr><tr><td style="text-align: center;"><img src="legend/Geologa_1_SerieOriental7.png" /></td><td>Serie Oriental</td></tr><tr><td style="text-align: center;"><img src="legend/Geologa_1_Terraza8.png" /></td><td>Terraza</td></tr></table>': layer_Geologa_1,"Mapa Base": layer_CapaBase_0,}).addTo(map);
+        setBounds();
+        resetLabels([layer_Cotasdenivel100m_7]);
+        map.on("zoomend", function(){
+            resetLabels([layer_Cotasdenivel100m_7]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_Cotasdenivel100m_7]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_Cotasdenivel100m_7]);
+        });
+        const sidepanelRight = L.control.sidepanel('mySidepanelRight', {
+			panelPosition: 'left',
+			tabsPosition: 'top',
+			pushControls: true,
+			darkMode: false,
+			startTab: 'tab-1'
+		}).addTo(map);
+
+// Crear los containers
+const container1 = document.querySelector("#geositio1");
+const container2 = document.querySelector("#geositio2");
+const container3 = document.querySelector("#geositio3");
+const container4 = document.querySelector("#geositio4");
+const container5 = document.querySelector("#geositio5");
+const container6 = document.querySelector("#geositio6");
+const container7 = document.querySelector("#geositio7");
+const container8 = document.querySelector("#geositio8");
+const container9 = document.querySelector("#geositio9");
+const container10 = document.querySelector("#geositio10");
+const container11 = document.querySelector("#geositio11");
+const container12 = document.querySelector("#geositio12");
+const container13 = document.querySelector("#geositio13");
+const container14 = document.querySelector("#geositio14");
+const container15 = document.querySelector("#geositio15");
+const container16 = document.querySelector("#geositio16");
+const container17 = document.querySelector("#geositio17");
+const container18 = document.querySelector("#geositio18");
+const container19 = document.querySelector("#geositio19");
+const container20 = document.querySelector("#geositio20");
+const container21 = document.querySelector("#geositio21");
+const container22 = document.querySelector("#geositio22");
+const container23 = document.querySelector("#geositio23");
+const container24 = document.querySelector("#geositio24");
+const container25 = document.querySelector("#geositio25");
+const container26 = document.querySelector("#geositio26");
+const container27 = document.querySelector("#geositio27");
+
+// Crear los botones
+const button1 = container1.querySelector("#button1");
+const button2 = container2.querySelector("#button2");
+const button3 = container3.querySelector("#button3");
+const button4 = container4.querySelector("#button4");
+const button5 = container5.querySelector("#button5");
+const button6 = container6.querySelector("#button6");
+const button7 = container7.querySelector("#button7");
+const button8 = container8.querySelector("#button8");
+const button9 = container9.querySelector("#button9");
+const button10 = container10.querySelector("#button10");
+const button11 = container11.querySelector("#button11");
+const button12 = container12.querySelector("#button12");
+const button13 = container13.querySelector("#button13");
+const button14 = container14.querySelector("#button14");
+const button15 = container15.querySelector("#button15");
+const button16 = container16.querySelector("#button16");
+const button17 = container17.querySelector("#button17");
+const button18 = container18.querySelector("#button18");
+const button19 = container19.querySelector("#button19");
+const button20 = container20.querySelector("#button20");
+const button21 = container21.querySelector("#button21");
+const button22 = container22.querySelector("#button22");
+const button23 = container23.querySelector("#button23");
+const button24 = container24.querySelector("#button24");
+const button25 = container25.querySelector("#button25");
+const button26 = container26.querySelector("#button26");
+const button27 = container27.querySelector("#button27");
+
+// Definir las coordenadas
+const coordinates = [
+[-36.47772599595986, -72.9108330291845],
+[-36.60220500976823, -72.9777779953026],
+[-36.589117,	-72.981109],
+[-36.525858,	-72.954766],
+[-36.536434,	-72.935156],
+[-36.52589,	-72.970442],
+[-36.563769,	-72.850654,],
+[-36.552847,	-72.957335],
+[-36.483879,	-72.908804],
+[-36.476763,	-72.911365],
+[-36.730119,	-72.990264],
+[-36.739508,	-73.00349,],
+[-36.680952,	-72.977008],
+[-36.527919,	-72.932444],
+[-36.635475,	-72.95771],
+[-36.547957,	-72.974634],
+[-36.547142,	-72.941457],
+[-36.617061,	-72.963495],
+[-36.702566,	-72.977349],
+[-36.737118,	-73.004915],
+[-36.667291,	-72.977735],
+[-36.445261,	-72.885916],
+[-36.651813,	-72.967546],
+[-36.496981,	-72.906786],
+[-36.658672,	-72.9723],
+[-36.530314,	-72.912071],
+[-36.523816,	-72.961066],
+];
+
+// Asociar las coordenadas a los botones
+button1.addEventListener("click", () => {
+  // Dirigirse al punto 1
+  map.setView(coordinates[0], 17);
+});
+
+button2.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[1], 17);
+});
+
+button3.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[2], 17);
+});
+
+button4.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[3], 17);
+});
+
+button5.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[4], 17);
+});
+
+button6.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[5], 17);
+});
+
+button7.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[6], 17);
+});
+
+button8.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[7], 17);
+});
+
+button9.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[8], 17);
+});
+
+button10.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[9], 17);
+});
+
+button11.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[10], 17);
+});
+
+button12.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[11], 17);
+});
+
+button13.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[12], 17);
+});
+
+button14.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[13], 17);
+});
+
+button17.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[14], 17);
+});
+
+button16.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[17], 17);
+});
+
+button17.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[16], 17);
+});
+
+button18.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[17], 17);
+});
+
+button19.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[18], 17);
+});
+
+button20.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[19], 17);
+});
+
+button21.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[20], 17);
+});
+
+button22.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[21], 17);
+});
+
+button23.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[22], 17);
+});
+
+button24.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[23], 17);
+});
+
+button25.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[24], 17);
+});
+
+button26.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[25], 17);
+});
+
+button27.addEventListener("click", () => {
+  // Dirigirse al punto 2
+  map.setView(coordinates[26], 17);
+});
+
+        </script>
+    </body>
+</html>
