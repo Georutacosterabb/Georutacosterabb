@@ -1549,33 +1549,7 @@ L.Control.Watermark=L.Control.extend({
                     }
                 L.control.watermark({position:'bottomleft'}).addTo(map);
 		
-L.Control.Watermark=L.Control.extend({
-            onAdd:function(map){
-                var img = L.DomUtil.create('img');
-                img.src = 'images/original.png';
-                img.style.width = '190px';
-                return img;
-                },
-                onRemove:function(map){},
-                });
-                L.control.watermark = function(opts){
-                    return new L.Control.Watermark(opts);
-                    }
-                L.control.watermark({position:'topcenter'}).addTo(map);
-		
-L.Control.Watermark=L.Control.extend({
-            onAdd:function(map){
-                var img = L.DomUtil.create('img');
-                img.src = 'images/Logo_UCSC.png';
-                img.style.width = '170px';
-                return img;
-                },
-                onRemove:function(map){},
-                });
-                L.control.watermark = function(opts){
-                    return new L.Control.Watermark(opts);
-                    }
-                L.control.watermark({position:'bottomright'}).addTo(map);
+
         </script>
     </body>
 </html>
