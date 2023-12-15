@@ -1579,7 +1579,7 @@ L.Control.Watermark=L.Control.extend({
             onAdd:function(map){
                 var img = L.DomUtil.create('img');
                 img.src = 'images/Logo GORE (1).png';
-                img.style.width = '45px';
+                img.style.width = '75px';
                 return img;
                 },
                 onRemove:function(map){},
@@ -1600,7 +1600,7 @@ L.Control.Watermark=L.Control.extend({
                 L.control.watermark = function(opts){
                     return new L.Control.Watermark(opts);
                     }
-                L.control.watermark({position:'topright'}).addTo(map);
+                L.control.watermark({position:'bottomright'}).addTo(map);
 		
 
         </script>
