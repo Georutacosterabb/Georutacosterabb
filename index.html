@@ -1574,7 +1574,7 @@ L.Control.Watermark=L.Control.extend({
                 L.control.watermark = function(opts){
                     return new L.Control.Watermark(opts);
                     }
-                L.control.watermark({position:'bottomleft'}).addTo(map);
+                L.control.watermark({position:'bottomright'}).addTo(map);
 L.Control.Watermark=L.Control.extend({
             onAdd:function(map){
                 var img = L.DomUtil.create('img');
@@ -1591,7 +1591,7 @@ L.Control.Watermark=L.Control.extend({
 L.Control.Watermark=L.Control.extend({
             onAdd:function(map){
                 var img = L.DomUtil.create('img');
-                img.src = 'images/original.png';
+                img.src = 'images/original2.png';
                 img.style.width = '190px';
                 return img;
                 },
