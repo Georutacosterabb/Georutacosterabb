@@ -1340,35 +1340,10 @@ const container25 = document.querySelector("#geositio25");
 const container26 = document.querySelector("#geositio26");
 const container27 = document.querySelector("#geositio27");
 
-// Crear los botones
-const button1 = container1.querySelector("#button1");
-const button2 = container2.querySelector("#button2");
-const button3 = container3.querySelector("#button3");
-const button4 = container4.querySelector("#button4");
-const button5 = container5.querySelector("#button5");
-const button6 = container6.querySelector("#button6");
-const button7 = container7.querySelector("#button7");
-const button8 = container8.querySelector("#button8");
-const button9 = container9.querySelector("#button9");
-const button10 = container10.querySelector("#button10");
-const button11 = container11.querySelector("#button11");
-const button12 = container12.querySelector("#button12");
-const button13 = container13.querySelector("#button13");
-const button14 = container14.querySelector("#button14");
-const button15 = container15.querySelector("#button15");
-const button16 = container16.querySelector("#button16");
-const button17 = container17.querySelector("#button17");
-const button18 = container18.querySelector("#button18");
-const button19 = container19.querySelector("#button19");
-const button20 = container20.querySelector("#button20");
-const button21 = container21.querySelector("#button21");
-const button22 = container22.querySelector("#button22");
-const button23 = container23.querySelector("#button23");
-const button24 = container24.querySelector("#button24");
-const button25 = container25.querySelector("#button25");
-const button26 = container26.querySelector("#button26");
-const button27 = container27.querySelector("#button27");
+const geositios = [container1, container2, container3, container4, container5, container6, container7, container8,container9, container10, container11, container12, container13, container14, container15, container16, container17, container18, container19, container20, container21, container22, container23, container24, container25, container26, container27 ] 
 
+let l = geositios.length;
+		
 // Definir las coordenadas
 const coordinates = [
 [-36.47772599595986, -72.9108330291845],
@@ -1400,168 +1375,13 @@ const coordinates = [
 [-36.523816,	-72.961066],
 ];
 
-// Asociar las coordenadas a los botones
-button1.addEventListener("click", () => {
-  // Dirigirse al punto 1
-  map.setView(coordinates[0], 17);
-document.querySelector(".sidepanel-toggle-button").click();
-});
+//Flyto
+for (let i = 0; i < l; i++)
 
-button2.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[1], 17);
-document.querySelector(".sidepanel-toggle-button").click();	
-});
+geositios[i].addEventListener("mouseover", ()=> {
+    map.flyTo(coordinates[i], 16);
+})
 
-button3.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[2], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button4.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[3], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button5.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[4], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button6.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[5], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button7.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[6], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button8.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[7], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button9.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[8], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button10.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[9], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button11.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[10], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button12.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[11], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button13.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[12], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button14.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[13], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button17.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[14], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button16.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[17], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button17.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[16], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button18.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[17], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button19.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[18], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button20.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[19], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button21.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[20], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button22.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[21], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button23.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[22], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button24.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[23], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button25.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[24], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button26.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[25], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
-
-button27.addEventListener("click", () => {
-  // Dirigirse al punto 2
-  map.setView(coordinates[26], 17);
-	document.querySelector(".sidepanel-toggle-button").click();
-});
 L.Control.Watermark=L.Control.extend({
             onAdd:function(map){
                 var img = L.DomUtil.create('img');
