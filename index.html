@@ -1276,9 +1276,12 @@ Responde a nuestra breve encuesta y ayudanos a mejorar la experiencia de los vis
         bounds_group.addLayer(layer_Puertos_18);
         map.addLayer(layer_Puertos_18);
         function pop_Geositios_19(feature, layer) {
-            var popupContent = '<h3>Feature Information</h3><table>\
+            var popupContent = '<h3>Geositio</h3><table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+		    <tr>\
+                        <td colspan="2">' + (feature.properties['PopupInfo'] !== null ? autolinker.link(feature.properties['PopupInfo'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
