@@ -1280,6 +1280,9 @@ Responde a nuestra breve encuesta y ayudanos a mejorar la experiencia de los vis
                     <tr>\
                         <td colspan="2">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['puppinfo'] !== null ? autolinker.link(feature.properties['puppinfo'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
