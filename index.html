@@ -27,12 +27,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 200px;
+  width: 80%;
+  max-width: 400px;
+  height: auto;
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
   z-index: 1000;
+  text-align: center;
+
+  /* Propiedades para la transición */
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+
+#bienvenida.cerrar {
+  opacity: 0;
 }
         </style>
         <title></title>
@@ -40,6 +50,7 @@
     <body>
 	    <div id="bienvenida">
             <h1>¡Bienvenidos a la página web!</h1>
+            <img src="Burca/Imagen-geoapp-01.jpg" alt="Imagen de bienvenida" title="Imagen de la empresa">
             <p>Aquí encontrarás información sobre...</p>
             <button onclick="cerrarBienvenida()">Cerrar</button>
           </div>
@@ -388,7 +399,17 @@ Responde a nuestra breve encuesta y ayudanos a mejorar la experiencia de los vis
             zoomControl:true, maxZoom:20, minZoom:9
         })
 		function cerrarBienvenida() {
-  document.getElementById("bienvenida").style.display = "none";
+  // Obtiene el elemento #bienvenida
+  var bienvenida = document.getElementById("bienvenida");
+
+  // Agrega una clase de transición al elemento
+  bienvenida.classList.add("cerrar");
+
+  // Espera a que la transición termine
+  bienvenida.addEventListener("transitionend", function() {
+    // Oculta el elemento
+    bienvenida.style.display = "none";
+  });
 }
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
