@@ -28,13 +28,61 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 80%; /* Ajusta el ancho para mejor visualización en móviles */
+  max-width: 500px; /* Limita el ancho máximo para pantallas grandes */
   height: auto;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 1em;
+  background-color: #f5f5f5; /* Suaviza el fondo blanco */
+  border-radius: 10px; /* Añade bordes redondeados */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+  padding: 20px; /* Aumenta el espacio interno */
   z-index: 5000;
   text-align: justify;
+  font-family: sans-serif; /* Usa una fuente más moderna */
+  color: #333; /* Mejora el contraste del texto */
+}
+
+#bienvenida h2 {
+  font-size: 1.5em; /* Destaca el título */
+  margin-bottom: 10px;
+}
+
+#bienvenida p {
+  line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+#bienvenida button {
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Elimina el borde del botón */
+  padding: 10px 20px; /* Ajusta el tamaño del botón */
+  border-radius: 5px; /* Bordes redondeados para el botón */
+  cursor: pointer; /* Indica interactividad */
+}
+
+#bienvenida img {
+  max-width: 100%; /* Asegura que las imágenes no desborden */
+  height: auto;
+  margin-bottom: 10px; /* Crea espacio entre imágenes y texto */
+}
+
+/* Animación de entrada */
+#bienvenida {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  #bienvenida {
+    width: 90%; /* Ocupa más espacio en pantallas pequeñas */
+    padding: 15px; /* Reduce el espacio interno */
+  }
+}
 
   /* Propiedades para la transición */
   transition: all 0.5s ease-in-out;
