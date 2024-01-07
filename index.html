@@ -39,7 +39,15 @@
   text-align: justify;
   font-family: sans-serif; /* Usa una fuente más moderna */
   color: #333; /* Mejora el contraste del texto */
+			  /* Propiedades para la transición */
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
 }
+
+#bienvenida.cerrar {
+  opacity: 0;
+}
+
 
 #bienvenida h2 {
   font-size: 1.5em; /* Destaca el título */
@@ -72,15 +80,6 @@
     width: 90%; /* Ocupa más espacio en pantallas pequeñas */
     padding: 15px; /* Reduce el espacio interno */
   }
-}
-
-  /* Propiedades para la transición */
-  transition: all 0.5s ease-in-out;
-  opacity: 1;
-}
-
-#bienvenida.cerrar {
-  opacity: 0;
 }
         </style>
         <title></title>
