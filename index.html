@@ -1533,19 +1533,15 @@ L.Control.Watermark=L.Control.extend({
                     return new L.Control.Watermark(opts);
                     }
                 L.control.watermark({position:'bottomright'}).addTo(map);
-		// Función para colapsar el selector de capas
-function collapseLayers() {
-  // Si el selector de capas está abierto, colapsarlo
-  if (L.control.layers()._isExpanded) {
-    L.control.layers().close();
-  }
-}
+		// Obtener el control de capas
+var layersControl = L.control.layers().addTo(map);
 
 // Añadir evento click al mapa
 map.on('click', function(e) {
   // Comprobar si el clic se ha realizado fuera del selector de capas
   if (!L.control.layers()._container.contains(e.target)) {
-    collapseLayers();
+    // Alternar el estado expandido y colapsado del selector de capas
+    layersControl.toggle();
   }
 });
         </script>
