@@ -1538,11 +1538,13 @@ function collapseLayers() {
   L.control.layers().collapse();
 }
 
-// Añadir evento click a las capas
-for (var i in overlayMaps) {
-  overlayMaps[i].on('click', collapseLayers);
-}
-
+// Añadir evento click al mapa
+map.on('click', function(e) {
+  // Comprobar si el clic se ha realizado fuera del selector de capas
+  if (!L.control.layers()._container.contains(e.target)) {
+    collapseLayers();
+  }
+});
         </script>
     </body>
 </html>
