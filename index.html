@@ -1533,7 +1533,15 @@ L.Control.Watermark=L.Control.extend({
                     return new L.Control.Watermark(opts);
                     }
                 L.control.watermark({position:'bottomright'}).addTo(map);
-		
+		// Función para colapsar el selector de capas
+function collapseLayers() {
+  L.control.layers().collapse();
+}
+
+// Añadir evento click a las capas
+for (var i in overlayMaps) {
+  overlayMaps[i].on('click', collapseLayers);
+}
 
         </script>
     </body>
