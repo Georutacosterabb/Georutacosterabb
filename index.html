@@ -1533,7 +1533,10 @@ L.Control.Watermark=L.Control.extend({
                     return new L.Control.Watermark(opts);
                     }
                 L.control.watermark({position:'bottomright'}).addTo(map);
-		
+
+		// Configurar el control de capas con opciones adicionales
+var controlCapas = L.control.layers({}, null, { collapsed: false, autoZIndex: true }).addTo(mapa);
+
 		// Evento de apertura de popup para colapsar el panel de capas
 mapa.on('popupopen', function () {
     // Obtener el encabezado del control de capas y simular un clic
