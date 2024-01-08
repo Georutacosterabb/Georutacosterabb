@@ -1534,6 +1534,13 @@ L.Control.Watermark=L.Control.extend({
                     }
                 L.control.watermark({position:'bottomright'}).addTo(map);
 		
+		// Evento de apertura de popup para colapsar el panel de capas
+mapa.on('popupopen', function () {
+    // Obtener el encabezado del control de capas y simular un clic
+    var panelControl = document.querySelector('.leaflet-control-layers');
+    var panelEncabezado = panelControl.querySelector('.leaflet-control-layers-toggle');
+    panelEncabezado.click();
+		
 
         </script>
     </body>
