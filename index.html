@@ -650,14 +650,7 @@ Responde a nuestra breve encuesta y ayudanos a mejorar la experiencia de los vis
         bounds_group.addLayer(layer_Geologa_1);
         map.addLayer(layer_Geologa_1);
         function pop_Geocircuitomartimo_2(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                },
-                mouseover: highlightFeature,
-            });
+           
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
@@ -753,14 +746,7 @@ Responde a nuestra breve encuesta y ayudanos a mejorar la experiencia de los vis
         bounds_group.addLayer(layer_Areasnaturales_3);
         map.addLayer(layer_Areasnaturales_3);
         function pop_GeocircuitoSur_3(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                },
-                mouseover: highlightFeature,
-            });
+            
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
@@ -800,14 +786,7 @@ Responde a nuestra breve encuesta y ayudanos a mejorar la experiencia de los vis
         bounds_group.addLayer(layer_GeocircuitoSur_3);
         map.addLayer(layer_GeocircuitoSur_3);
         function pop_GeocircuitoNorte_4(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                },
-                mouseover: highlightFeature,
-            });
+            
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
@@ -847,14 +826,7 @@ Responde a nuestra breve encuesta y ayudanos a mejorar la experiencia de los vis
         bounds_group.addLayer(layer_GeocircuitoNorte_4);
         map.addLayer(layer_GeocircuitoNorte_4);
         function pop_GeocircuitoIntermedio_5(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                },
-                mouseover: highlightFeature,
-            });
+           
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Info'] !== null ? autolinker.link(feature.properties['Info'].toLocaleString()) : '') + '</td>\
@@ -894,14 +866,7 @@ Responde a nuestra breve encuesta y ayudanos a mejorar la experiencia de los vis
         bounds_group.addLayer(layer_GeocircuitoIntermedio_5);
         map.addLayer(layer_GeocircuitoIntermedio_5);
 	function pop_Oficinas_6(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                },
-                mouseover: highlightFeature,
-            });
+           
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Name'] !== null ? autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
@@ -1457,14 +1422,7 @@ Responde a nuestra breve encuesta y ayudanos a mejorar la experiencia de los vis
         bounds_group.addLayer(layer_Puertos_18);
         map.addLayer(layer_Puertos_18);
          function pop_Geositios_7(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                },
-                mouseover: highlightFeature,
-            });
+           
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
