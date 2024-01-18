@@ -499,14 +499,6 @@ Responde a nuestra breve encuesta y ayudanos a mejorar la experiencia de los vis
         layer_CapaBase_0;
         map.addLayer(layer_CapaBase_0);
        function pop_Geologa_1(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                },
-                mouseover: highlightFeature,
-            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
